@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // function to gen readme file
-const generateREADME = ( {} ) => 
+const generateREADME = ( { project, description, installation, usage, license, contribute, testing, issues, githubLink, emailAddress, } ) => 
 `# ${project}
 
 ## Description
