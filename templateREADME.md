@@ -20,15 +20,15 @@ If people like your project they’ll want to learn how they can use it. To do s
 ## License
 MIT © [nicanthoni]()
 
-## Contribute
+## How to Contribute
 Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
 
 ## Tests
 TBD
 
-## How to report issues?
+## How to Report Issues
 TBD
 
-## Questions
+## Ask Questions
 * [Github Profile](link here)
 * [Email Address](email here)
