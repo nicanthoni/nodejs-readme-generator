@@ -1,11 +1,47 @@
-// TODO: Include packages needed for this application
+// 
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
+// function to gen readme file
+const generateREADME = ( {} ) => 
+`# ${project}
+
+## Description
+* ${description}
+
+## Table of Contents
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+
+## Installation
+* ${installation}
+
+## Usage
+* ${usage}
+
+## License
+${license} (url to bage?)
+
+## How to Contribute
+* ${contribute}
+
+## Tests
+* ${testing}
+
+## How to Report Issues
+* ${issues}
+
+## Ask Questions
+* [Github Profile](${githubLink})
+* [Email Address](${emailAddress})`;
+
 
 inquirer
-    .createPromptModule([
+    .prompt([
         {
             type: 'input',
             name: 'project',
@@ -35,36 +71,52 @@ inquirer
             type: 'input',
             name: 'testing',
             message: "How is the application tested?"
+        },
+        {
+            type: 'input',
+            name: 'issues',
+            message: "How may one report issues?"
+        },
+        {
+            type: 'input',
+            name: 'emailAddress',
+            message: "What is the best email address to contact you at?"
+        },
+        {
+            type: 'input',
+            name: 'githubLink',
+            message: "What is the URL of your Github profile?"
+        },
+        {
+            type: 'list',
+            name: 'license',
+            message: "What license is used for your application?",
+            choices: ["MIT", "GPLv2","Apache", "GPLv3", "BSD 3-clause", "Unlicense", "BSD 2-clause", "LGPLv3", "AGPLv3", "Other"]
         }
+
     ])
 
  // takes answers from user input, uses as argugment in function that takes in name values (project,description,installation etc) and uses backticks and ${} to add to readme
-.then((answers)) => {
-    const readMeContent = generateReadMe(answers);
-}
+.then((answers) => {
+    // console.log(answers)
+    const readMeContent = generateREADME(answers);
+
+    fs.writeFile('README.md', readMeContent, (err) =>
+    err ? console.log(err) : console.log('A new README.md file has been successfully created!')
+    );
+});
 
 
-//  THIS IS WRONG, RIGHT? Decided on taking object array route above // 
-
-//          const questions = [
-// //     "What is the title of your project?",
-// //     "Provide a project description. What is the 'why'?",
-// //     "How is the application installed?",
-// //     "How is the application used?",
-// //     "How may other developers contribute to this project?",
-// //     "How is the application tested? ",
-// //     "",
-// // ];
 
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+// // TODO: Create a function to write README file
+// function writeToFile(fileName, data) { }
 
-// TODO: Create a function to initialize app
-function init() { }
+// // TODO: Create a function to initialize app
+// function init() { }
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
 
 
 
