@@ -3,12 +3,8 @@
 ## Description
 * This project exists to utilize nodejs & npm to create a README generator through javascript.
 
-## Screenshots
-* Below are screenshot examples of the application in use, and it's functionality:
-
-![ScreenShot](./Develop/assets/readmeGen1.png)
-![ScreenShot](./Develop/assets/readmeGen2.png)
-![ScreenShot](./Develop/assets/readmeGen3.png)
+## Demo Video
+Link to walthrough video: https://drive.google.com/file/d/1BDp9efrcTQ9IPO-EBQPYfuAS1098tdO7/view
 
 ## Usage
 * In your IDE's integrated terminal, open up the index.js file from the Develop folder. Run the application by putting the following command into your terminal: 'node index.js'
